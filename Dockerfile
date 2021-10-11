@@ -26,4 +26,4 @@ COPY --from=builder /app/api-server .
 
 HEALTHCHECK CMD curl --fail http://localhost:8080/healthcheck || exit 1
 
-CMD ["./api-server"]
+ENTRYPOINT ["./api-server"]
