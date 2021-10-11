@@ -40,7 +40,7 @@ func main() {
 
   // Healthcheck Endpoint For Docker Container
   e.GET("/healthcheck", func(c echo.Context) error {
-    return c.NoContent(http.StatusOK)
+    return c.String(http.StatusOK, "OK")
   })
 
   // Start server
