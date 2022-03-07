@@ -36,7 +36,7 @@ func gotify(c echo.Context) error {
     })
   }
 
-  http.PostForm("https://push.ldsnetwork.xyz/message?token=" + token,
+  http.PostForm("https://push.****.xyz/message?token=" + token,
     url.Values{"message": {message}, "title": {title}})
 
 	return c.JSON(http.StatusOK, struct {
